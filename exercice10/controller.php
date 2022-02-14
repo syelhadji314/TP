@@ -1,0 +1,21 @@
+<?php
+include_once'fonctions.php';
+include_once'../fonctionIdent.php';
+session_start();
+if (isset($_POST['number'])){
+    $nbre=$_POST['number'];
+    $erreur=[];
+    $_SESSION['post']=$_POST;
+    saisie($nbre,"number",$erreur);
+    if(empty($erreur)){
+        lesChamps($nbre);
+    }
+    else{
+        $_SESSION['error']=$erreur;
+        header('location:index.php');
+        exit();
+    }
+}else{
+    header('location:index.php');
+    exit();
+}

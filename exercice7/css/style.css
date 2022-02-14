@@ -1,0 +1,16 @@
+.date {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#content {
+    height: 60vh;
+    width: 50vw;
+    border: 2px solid red;
+    background-color: aqua;
+}
+
+#btn {
+    background-color: green;
+}
